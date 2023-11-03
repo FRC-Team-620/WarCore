@@ -4,14 +4,38 @@ import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.Arrays;
 
+/**
+ * The `NetworkUtil` class provides utility methods for working with
+ * network-related operations
+ */
 public final class NetworkUtil {
 
 	private static final String networkInterface = "eth0";
 
+	/**
+	 * Retrieves the MAC address for a network interface with the specified name.
+	 *
+	 * @param interfaceName
+	 *            The name of the network interface for which the MAC address is to
+	 *            be obtained.
+	 * @return A `MACAddress` object representing the MAC address of the specified
+	 *         network interface.
+	 * @throws SocketException
+	 *             If an error occurs while attempting to retrieve the MAC address.
+	 */
 	public static MACAddress getMacAddress(String interfaceName) throws SocketException {
 		MACAddress macAddress = new MACAddress(NetworkInterface.getByName(interfaceName).getHardwareAddress());
 		return macAddress;
 	}
+
+	/**
+	 * Retrieves the MAC address for the default network interface.
+	 *
+	 * @return A `MACAddress` object representing the MAC address of the default
+	 *         network interface.
+	 * @throws SocketException
+	 *             If an error occurs while attempting to retrieve the MAC address.
+	 */
 	public static MACAddress getMacAddress() throws SocketException {
 		return NetworkUtil.getMacAddress(networkInterface);
 	}
@@ -25,6 +49,7 @@ public final class NetworkUtil {
 			}
 			this.address = address;
 		}
+
 		public MACAddress(String address) {
 			if (address == null) {
 				throw new NullPointerException();
@@ -52,6 +77,7 @@ public final class NetworkUtil {
 		public int hashCode() {
 			return Arrays.hashCode(address);
 		}
+
 		private String bytesToHex(byte[] bytes) {
 			StringBuilder hexString = new StringBuilder(2 * bytes.length);
 			for (byte b : bytes) {
@@ -63,6 +89,7 @@ public final class NetworkUtil {
 			}
 			return hexString.toString().toUpperCase();
 		}
+
 		private static byte[] parseHex(String hexString) {
 			hexString = hexString.replaceAll(":", ""); // Remove ':' if present
 			int length = hexString.length();
