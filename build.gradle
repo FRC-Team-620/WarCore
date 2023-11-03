@@ -3,6 +3,7 @@ plugins {
     id 'application'
     id "maven-publish"
     id "edu.wpi.first.GradleRIO" version "2023.2.1"
+    id 'com.diffplug.spotless' version '6.12.0'
 }
 
 
@@ -108,5 +109,52 @@ publishing {
             version = '1.1'
             from components.java
         }
+    }
+}
+project.compileJava.dependsOn(spotlessApply);
+spotless {
+    // ratchetFrom 'origin/master'
+    enforceCheck false
+    java {
+        target fileTree('.') {
+            include '**/*.java'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        toggleOffOn()
+        // googleJavaFormat()
+        eclipse()
+        removeUnusedImports()
+        // indentWithSpaces()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+    groovyGradle {
+        target fileTree('.') {
+            include '**/*.gradle'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        greclipse()
+        indentWithSpaces(4)
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+    format 'xml', {
+        target fileTree('.') {
+            include '**/*.xml'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        eclipseWtp('xml')
+        trimTrailingWhitespace()
+        indentWithSpaces(2)
+        endWithNewline()
+    }
+    format 'misc', {
+        target fileTree('.') {
+            include '**/*.md', '**/.gitignore'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        trimTrailingWhitespace()
+        indentWithSpaces(2)
+        endWithNewline()
     }
 }
