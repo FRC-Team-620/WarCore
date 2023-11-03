@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.networktables.NetworkTableInstance;
+import edu.wpi.first.networktables.NetworkTablesJNI;
 import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 
 public class SwerveVisualizerTest {
@@ -22,7 +23,7 @@ public class SwerveVisualizerTest {
 
     @AfterEach
     public void cleanUp() {
-        NetworkTableInstance.getDefault().deleteAllEntries(); // Clean Networktables between tests
+        NetworkTablesJNI.destroyInstance(NetworkTableInstance.getDefault().getHandle());
     }
 
     @Test
