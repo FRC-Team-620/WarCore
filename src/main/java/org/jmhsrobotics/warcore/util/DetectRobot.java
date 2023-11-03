@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class DetectRobot {
 
-    public enum RobotType {
+	public enum RobotType {
 		BABY_BOT, SUSAN, BOT_2020, UNKNOWN
 	}
 	private static final String networkInterface = "eth0";
