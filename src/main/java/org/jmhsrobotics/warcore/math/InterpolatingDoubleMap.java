@@ -2,6 +2,19 @@ package org.jmhsrobotics.warcore.math;
 
 import java.util.TreeMap;
 
+/**
+ * The InterpolatingDoubleMap class is a specialized TreeMap implementation for
+ * storing data points as key-value pairs of double values, where the keys represent
+ * the independent variable (usually x-values) and the values represent the
+ * dependent variable (usually y-values). This class extends the TreeMap class
+ * and provides additional functionality for linear interpolation between data points.
+ *
+ * Linear interpolation is a method for estimating values between two known data
+ * points. The class allows you to efficiently perform linear interpolation on the
+ * stored data points, enabling you to find interpolated values for a given input
+ * independent variable.
+ *
+ */
 public class InterpolatingDoubleMap extends TreeMap<Double, Double> {
 	/**
 	 * Determines whether the specified key is between the lowest and highest keys
