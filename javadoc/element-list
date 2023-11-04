@@ -1,6 +1,7 @@
 org.jmhsrobotics.warcore
 org.jmhsrobotics.warcore.math
 org.jmhsrobotics.warcore.nt
+org.jmhsrobotics.warcore.rev
 org.jmhsrobotics.warcore.sim
 org.jmhsrobotics.warcore.swerve
 org.jmhsrobotics.warcore.util

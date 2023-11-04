@@ -15,7 +15,11 @@
 <script type="text/javascript" src="script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="all-classes-index-page">
-<script type="text/javascript">var pathtoroot = "./";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "./";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -50,21 +54,35 @@ loadScripts(document, 'script');</script>
 <h1 title="All Classes and Interfaces" class="title">All Classes and Interfaces</h1>
 </div>
 <div id="all-classes-table">
-<div class="caption"><span>Classes</span></div>
-<div class="summary-table two-column-summary">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="all-classes-table-tab0" role="tab" aria-selected="true" aria-controls="all-classes-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="all-classes-table-tab1" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab1', 2)" class="table-tab">Interfaces</button><button id="all-classes-table-tab2" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab2', 2)" class="table-tab">Classes</button><button id="all-classes-table-tab3" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab3', 2)" class="table-tab">Enum Classes</button></div>
+<div id="all-classes-table.tabpanel" role="tabpanel">
+<div class="summary-table two-column-summary" aria-labelledby="all-classes-table-tab0">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/math/DiminishingAverageHandler.html" title="class in org.jmhsrobotics.warcore.math">DiminishingAverageHandler</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/rev/BaseEncoderWrapper.html" title="class in org.jmhsrobotics.warcore.rev">BaseEncoderWrapper</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/math/DiminishingAverageHandler.html" title="class in org.jmhsrobotics.warcore.math">DiminishingAverageHandler</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">A classed used to handle running averages where past data should be discarded
  over time.</div>
 </div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="org/jmhsrobotics/warcore/rev/IEncoderWrapper.html" title="interface in org.jmhsrobotics.warcore.rev">IEncoderWrapper</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/math/InterpolatingDoubleMap.html" title="class in org.jmhsrobotics.warcore.math">InterpolatingDoubleMap</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">The InterpolatingDoubleMap class is a specialized TreeMap implementation for
  storing data points as key-value pairs of double values, where the keys
  represent the independent variable (usually x-values) and the values
  represent the dependent variable (usually y-values).</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/nt/LimeLight.html" title="class in org.jmhsrobotics.warcore.nt">LimeLight</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">The LimeLight class provides an interface for interacting with a LimeLight
+ vision camera through NetworkTables.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="org/jmhsrobotics/warcore/nt/LimeLight.LedMode.html" title="enum class in org.jmhsrobotics.warcore.nt">LimeLight.LedMode</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="block">Enum representing the available LED modes for the LimeLight camera.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/sim/LimeLightSim.html" title="class in org.jmhsrobotics.warcore.sim">LimeLightSim</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
@@ -87,6 +105,16 @@ loadScripts(document, 'script');</script>
 <div class="block">The <a href="org/jmhsrobotics/warcore/nt/NT4Util.html" title="class in org.jmhsrobotics.warcore.nt"><code>NT4Util</code></a> helper class provides helper methods to put non-standard
  datatypes into networktables via SmartDashboard.</div>
 </div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/math/PoseUtill.html" title="class in org.jmhsrobotics.warcore.math">PoseUtill</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Utility class for working with Pose2d and related transformations.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/rev/RevEncoderSimWrapper.html" title="class in org.jmhsrobotics.warcore.rev">RevEncoderSimWrapper</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">The `RevEncoderSimWrapper` class provides a wrapper for simulating encoder
+ data associated with a `CANSparkMax` motor controller using WPILib's
+ simulation framework.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/util/RobotIdentifier.html" title="class in org.jmhsrobotics.warcore.util">RobotIdentifier</a>&lt;<a href="org/jmhsrobotics/warcore/util/RobotIdentifier.html" title="type parameter in RobotIdentifier">V</a>&gt;</div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">The `RobotIdentifier` class provides a mechanism for identifying a roboRIO
@@ -94,9 +122,26 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/math/RobotMath.html" title="class in org.jmhsrobotics.warcore.math">RobotMath</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/swerve/SwerveVisualizer.html" title="class in org.jmhsrobotics.warcore.swerve">SwerveVisualizer</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html" title="class in org.jmhsrobotics.warcore.rev">SendableCANPIDController</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/rev/SimSparkMax.html" title="class in org.jmhsrobotics.warcore.rev">SimSparkMax</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">The `SimSparkMax` class extends `CANSparkMax` to provide enhanced simulation
+ support for Spark MAX motor controllers.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html" title="class in org.jmhsrobotics.warcore.rev">SparkPIDDrivewrapper</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/swerve/SwerveVisualizer.html" title="class in org.jmhsrobotics.warcore.swerve">SwerveVisualizer</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Creates a Swerve Visualizer that can be viewed via a Field2d Widget.</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html" title="class in org.jmhsrobotics.warcore.nt">TrajectorySelector</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="org/jmhsrobotics/warcore/math/TuneableProfiledPIDController.html" title="class in org.jmhsrobotics.warcore.math">TuneableProfiledPIDController</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Implements a PID control loop whose setpoint is constrained by a trapezoid
+ profile.</div>
+</div>
 </div>
 </div>
 </div>
