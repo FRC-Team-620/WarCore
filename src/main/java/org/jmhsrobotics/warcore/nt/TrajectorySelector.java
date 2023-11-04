@@ -40,9 +40,6 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 	 *
 	 * @param directory
 	 *            Directory to load Trajectory json files from
-	 * @param defaultFirst
-	 *            Wether or not to set the first found file as the default value.
-	 *            See getSelection()
 	 */
 	public TrajectorySelector(Path directory) {
 		this(directory, false);
