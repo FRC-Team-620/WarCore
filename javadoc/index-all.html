@@ -49,7 +49,7 @@ loadScripts(document, 'script');</script>
 <div class="header">
 <h1>Index</h1>
 </div>
-<a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a><span class="vertical-separator">|</span><a href="serialized-form.html">Serialized&nbsp;Form</a>
+<a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a><span class="vertical-separator">|</span><a href="serialized-form.html">Serialized&nbsp;Form</a>
 <h2 class="title" id="I:A">A</h2>
 <dl class="index">
 <dt><a href="org/jmhsrobotics/warcore/util/RobotIdentifier.html#addDefaultRobot(V)" class="member-name-link">addDefaultRobot(V)</a> - Method in class org.jmhsrobotics.warcore.util.<a href="org/jmhsrobotics/warcore/util/RobotIdentifier.html" title="class in org.jmhsrobotics.warcore.util">RobotIdentifier</a></dt>
@@ -87,6 +87,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Takes any angle in degrees in the domain (-infinity, infinitiy) and returns
  its value relative to 0 in the domain [-180, 180].</div>
 </dd>
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html#constraints" class="member-name-link">constraints</a> - Variable in class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/jmhsrobotics/warcore/rev/RevEncoderSimWrapper.html#create(com.revrobotics.CANSparkMax)" class="member-name-link">create(CANSparkMax)</a> - Static method in class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/RevEncoderSimWrapper.html" title="class in org.jmhsrobotics.warcore.rev">RevEncoderSimWrapper</a></dt>
 <dd>
 <div class="block">Creates a new instance of `RevEncoderSimWrapper` for simulating encoder data
@@ -177,6 +179,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="org/jmhsrobotics/warcore/rev/IEncoderWrapper.html#getPosition()" class="member-name-link">getPosition()</a> - Method in interface org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/IEncoderWrapper.html" title="interface in org.jmhsrobotics.warcore.rev">IEncoderWrapper</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html#getProfiledPIDController(org.jmhsrobotics.warcore.math.ProfiledPIDConfig)" class="member-name-link">getProfiledPIDController(ProfiledPIDConfig)</a> - Static method in class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html#getSetpoint()" class="member-name-link">getSetpoint()</a> - Method in class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html" title="class in org.jmhsrobotics.warcore.rev">SendableCANPIDController</a></dt>
 <dd>
 <div class="block">A hacky getSetpoint method that just returns the last setpoint set via this
@@ -233,6 +237,15 @@ loadScripts(document, 'script');</script>
 <div class="block">Determines whether the specified key is between the lowest and highest keys
  in a non-empty tree map</div>
 </dd>
+</dl>
+<h2 class="title" id="I:K">K</h2>
+<dl class="index">
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html#kd" class="member-name-link">kd</a> - Variable in class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html#ki" class="member-name-link">ki</a> - Variable in class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html#kp" class="member-name-link">kp</a> - Variable in class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
 <dl class="index">
@@ -323,6 +336,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Utility class for working with Pose2d and related transformations.</div>
 </dd>
 <dt><a href="org/jmhsrobotics/warcore/math/PoseUtill.html#%3Cinit%3E()" class="member-name-link">PoseUtill()</a> - Constructor for class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/PoseUtill.html" title="class in org.jmhsrobotics.warcore.math">PoseUtill</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html#posTol" class="member-name-link">posTol</a> - Variable in class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" class="type-name-link" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a> - Class in <a href="org/jmhsrobotics/warcore/math/package-summary.html">org.jmhsrobotics.warcore.math</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html#%3Cinit%3E(double,double,double,edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints)" class="member-name-link">ProfiledPIDConfig(double, double, double, TrapezoidProfile.Constraints)</a> - Constructor for class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html#%3Cinit%3E(double,double,double,edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints,double,double)" class="member-name-link">ProfiledPIDConfig(double, double, double, TrapezoidProfile.Constraints, double, double)</a> - Constructor for class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/jmhsrobotics/warcore/nt/NT4Util.html#putPose2d(java.lang.String,edu.wpi.first.math.geometry.Pose2d...)" class="member-name-link">putPose2d(String, Pose2d...)</a> - Static method in class org.jmhsrobotics.warcore.nt.<a href="org/jmhsrobotics/warcore/nt/NT4Util.html" title="class in org.jmhsrobotics.warcore.nt">NT4Util</a></dt>
 <dd>
@@ -521,8 +542,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
 </dd>
+<dt><a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html#velTol" class="member-name-link">velTol</a> - Variable in class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/ProfiledPIDConfig.html" title="class in org.jmhsrobotics.warcore.math">ProfiledPIDConfig</a></dt>
+<dd>&nbsp;</dd>
 </dl>
-<a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a><span class="vertical-separator">|</span><a href="serialized-form.html">Serialized&nbsp;Form</a></main>
+<a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a><span class="vertical-separator">|</span><a href="serialized-form.html">Serialized&nbsp;Form</a></main>
 </div>
 </div>
 </body>
