@@ -25,7 +25,9 @@ public class NetworkUtilTest {
 		assertFalse(same1.equals(diff));
 		assertFalse(diff.equals(same2));
 		assertTrue(diff.equals(diff));
-		assertFalse(same1.equals("anything"));
+		@SuppressWarnings("unlikely-arg-type")
+		Boolean t = same1.equals("anything");
+		assertFalse(t);
 		same1.hashCode();
 		new NetworkUtil();
 	}
