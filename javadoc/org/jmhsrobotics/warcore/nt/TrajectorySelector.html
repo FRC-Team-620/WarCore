@@ -115,18 +115,6 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.trajectory.Trajectory</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPart1()" class="member-name-link">getPart1</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.trajectory.Trajectory</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPart2()" class="member-name-link">getPart2</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.trajectory.Trajectory</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPart3()" class="member-name-link">getPart3</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.trajectory.Trajectory</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPart4()" class="member-name-link">getPart4</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initSendable(edu.wpi.first.util.sendable.SendableBuilder)" class="member-name-link">initSendable</a><wbr>(edu.wpi.first.util.sendable.SendableBuilder&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -134,6 +122,12 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#linkField(edu.wpi.first.wpilibj.smartdashboard.Field2d)" class="member-name-link">linkField</a><wbr>(edu.wpi.first.wpilibj.smartdashboard.Field2d&nbsp;field)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Links a field2d to this selector.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadTrajectories(java.nio.file.Path,boolean)" class="member-name-link">loadTrajectories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;directory,
+ boolean&nbsp;defaultFirst)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads trajectory files from a directory.</div>
 </div>
 </div>
 </div>
@@ -186,27 +180,17 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getPart1()">
-<h3>getPart1</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.trajectory.Trajectory</span>&nbsp;<span class="element-name">getPart1</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getPart2()">
-<h3>getPart2</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.trajectory.Trajectory</span>&nbsp;<span class="element-name">getPart2</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getPart3()">
-<h3>getPart3</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.trajectory.Trajectory</span>&nbsp;<span class="element-name">getPart3</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getPart4()">
-<h3>getPart4</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.trajectory.Trajectory</span>&nbsp;<span class="element-name">getPart4</span>()</div>
+<section class="detail" id="loadTrajectories(java.nio.file.Path,boolean)">
+<h3>loadTrajectories</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadTrajectories</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;directory,
+ boolean&nbsp;defaultFirst)</span></div>
+<div class="block">Loads trajectory files from a directory.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>directory</code> - Directory to load Trajectory json files from</dd>
+<dd><code>defaultFirst</code> - Wether or not to set the first found file as the default value.
+            See getSelection()</dd>
+</dl>
 </section>
 </li>
 <li>

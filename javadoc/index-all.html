@@ -177,14 +177,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Retrieves the MAC address for a network interface with the specified name.</div>
 </dd>
-<dt><a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html#getPart1()" class="member-name-link">getPart1()</a> - Method in class org.jmhsrobotics.warcore.nt.<a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html" title="class in org.jmhsrobotics.warcore.nt">TrajectorySelector</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html#getPart2()" class="member-name-link">getPart2()</a> - Method in class org.jmhsrobotics.warcore.nt.<a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html" title="class in org.jmhsrobotics.warcore.nt">TrajectorySelector</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html#getPart3()" class="member-name-link">getPart3()</a> - Method in class org.jmhsrobotics.warcore.nt.<a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html" title="class in org.jmhsrobotics.warcore.nt">TrajectorySelector</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html#getPart4()" class="member-name-link">getPart4()</a> - Method in class org.jmhsrobotics.warcore.nt.<a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html" title="class in org.jmhsrobotics.warcore.nt">TrajectorySelector</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html#getPIDControlType()" class="member-name-link">getPIDControlType()</a> - Method in class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html" title="class in org.jmhsrobotics.warcore.rev">SparkPIDDrivewrapper</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org/jmhsrobotics/warcore/rev/BaseEncoderWrapper.html#getPosition()" class="member-name-link">getPosition()</a> - Method in class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/BaseEncoderWrapper.html" title="class in org.jmhsrobotics.warcore.rev">BaseEncoderWrapper</a></dt>
@@ -288,6 +280,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html#linkField(edu.wpi.first.wpilibj.smartdashboard.Field2d)" class="member-name-link">linkField(Field2d)</a> - Method in class org.jmhsrobotics.warcore.nt.<a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html" title="class in org.jmhsrobotics.warcore.nt">TrajectorySelector</a></dt>
 <dd>
 <div class="block">Links a field2d to this selector.</div>
+</dd>
+<dt><a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html#loadTrajectories(java.nio.file.Path,boolean)" class="member-name-link">loadTrajectories(Path, boolean)</a> - Method in class org.jmhsrobotics.warcore.nt.<a href="org/jmhsrobotics/warcore/nt/TrajectorySelector.html" title="class in org.jmhsrobotics.warcore.nt">TrajectorySelector</a></dt>
+<dd>
+<div class="block">Loads trajectory files from a directory.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:M">M</h2>
@@ -545,13 +541,19 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org/jmhsrobotics/warcore/math/TuneableProfiledPIDController.html" class="type-name-link" title="class in org.jmhsrobotics.warcore.math">TuneableProfiledPIDController</a> - Class in <a href="org/jmhsrobotics/warcore/math/package-summary.html">org.jmhsrobotics.warcore.math</a></dt>
 <dd>
-<div class="block">Implements a PID control loop whose setpoint is constrained by a trapezoid
- profile.</div>
+<div class="block">A wrapper for ProfiledPIDController that allows for trapezoidal profile
+ constraints to be tuned in real-time via NetworkTables.</div>
 </dd>
 <dt><a href="org/jmhsrobotics/warcore/math/TuneableProfiledPIDController.html#%3Cinit%3E(double,double,double,edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints)" class="member-name-link">TuneableProfiledPIDController(double, double, double, TrapezoidProfile.Constraints)</a> - Constructor for class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/TuneableProfiledPIDController.html" title="class in org.jmhsrobotics.warcore.math">TuneableProfiledPIDController</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Allocates a TuneableProfiledPIDController with the given constants for Kp,
+ Ki, and Kd.</div>
+</dd>
 <dt><a href="org/jmhsrobotics/warcore/math/TuneableProfiledPIDController.html#%3Cinit%3E(double,double,double,edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints,double)" class="member-name-link">TuneableProfiledPIDController(double, double, double, TrapezoidProfile.Constraints, double)</a> - Constructor for class org.jmhsrobotics.warcore.math.<a href="org/jmhsrobotics/warcore/math/TuneableProfiledPIDController.html" title="class in org.jmhsrobotics.warcore.math">TuneableProfiledPIDController</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Allocates a TuneableProfiledPIDController with the given constants for Kp,
+ Ki, and Kd.</div>
+</dd>
 <dt><a href="org/jmhsrobotics/warcore/util/tuning/AutoTunable.TuneableSender.html#%3Cinit%3E(java.lang.String,java.util.ArrayList)" class="member-name-link">TuneableSender(String, ArrayList&lt;AutoTunable.TuneableField&gt;)</a> - Constructor for class org.jmhsrobotics.warcore.util.tuning.<a href="org/jmhsrobotics/warcore/util/tuning/AutoTunable.TuneableSender.html" title="class in org.jmhsrobotics.warcore.util.tuning">AutoTunable.TuneableSender</a></dt>
 <dd>&nbsp;</dd>
 </dl>

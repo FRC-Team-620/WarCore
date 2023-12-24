@@ -83,9 +83,26 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">TuneableProfiledPIDController</span>
 <span class="extends-implements">extends edu.wpi.first.math.controller.ProfiledPIDController</span></div>
-<div class="block">Implements a PID control loop whose setpoint is constrained by a trapezoid
- profile. Users should call reset() when they first start running the
- controller to avoid unwanted behavior.</div>
+<div class="block">A wrapper for ProfiledPIDController that allows for trapezoidal profile
+ constraints to be tuned in real-time via NetworkTables.
+
+ <p>
+ The following values are published to NetworkTables for tuning and
+ monitoring:
+ <ul>
+ <li>"p": Proportional gain of the PID controller.</li>
+ <li>"i": Integral gain of the PID controller.</li>
+ <li>"d": Derivative gain of the PID controller.</li>
+ <li>"goal": The target position of the motion profile.</li>
+ <li>"maxAcc": Maximum acceleration constraint of the motion profile.</li>
+ <li>"maxVel": Maximum velocity constraint of the motion profile .</li>
+ <li>"[RO] setpoint pos": Read-only property for the current setpoint
+ position.</li>
+ <li>"[RO] setpoint vel": Read-only property for the current setpoint
+ velocity.</li>
+ <li>"[RO] in": Read-only property for the current input value.</li>
+ <li>"[RO] out": Read-only property for the current output value.</li>
+ </ul></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -101,13 +118,19 @@ loadScripts(document, 'script');</script>
  double&nbsp;Ki,
  double&nbsp;Kd,
  edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints&nbsp;constraints)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Allocates a TuneableProfiledPIDController with the given constants for Kp,
+ Ki, and Kd.</div>
+</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(double,double,double,edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints,double)" class="member-name-link">TuneableProfiledPIDController</a><wbr>(double&nbsp;Kp,
  double&nbsp;Ki,
  double&nbsp;Kd,
  edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints&nbsp;constraints,
  double&nbsp;period)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Allocates a TuneableProfiledPIDController with the given constants for Kp,
+ Ki, and Kd.</div>
+</div>
 </div>
 </section>
 </li>
@@ -159,6 +182,17 @@ loadScripts(document, 'script');</script>
  double&nbsp;Kd,
  edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints&nbsp;constraints,
  double&nbsp;period)</span></div>
+<div class="block">Allocates a TuneableProfiledPIDController with the given constants for Kp,
+ Ki, and Kd.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>Kp</code> - The proportional coefficient.</dd>
+<dd><code>Ki</code> - The integral coefficient.</dd>
+<dd><code>Kd</code> - The derivative coefficient.</dd>
+<dd><code>constraints</code> - Velocity and acceleration constraints for goal.</dd>
+<dd><code>period</code> - The period between controller updates in seconds. The default is
+            0.02 seconds.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -168,6 +202,15 @@ loadScripts(document, 'script');</script>
  double&nbsp;Ki,
  double&nbsp;Kd,
  edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints&nbsp;constraints)</span></div>
+<div class="block">Allocates a TuneableProfiledPIDController with the given constants for Kp,
+ Ki, and Kd.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>Kp</code> - The proportional coefficient.</dd>
+<dd><code>Ki</code> - The integral coefficient.</dd>
+<dd><code>Kd</code> - The derivative coefficient.</dd>
+<dd><code>constraints</code> - Velocity and acceleration constraints for goal.</dd>
+</dl>
 </section>
 </li>
 </ul>
