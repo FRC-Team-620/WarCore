@@ -2,6 +2,7 @@ package org.jmhsrobotics.warcore.nt;
 
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Pose3d;
+import edu.wpi.first.math.trajectory.Trajectory;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
@@ -35,7 +36,7 @@ public class NT4Util {
 	}
 
 	/**
-	 * Put a Pose2d array in the table as a Pose3d (Assumes z=0)
+	 * Put a Pose2d array in the table
 	 *
 	 * @param key
 	 *            the key to be assigned to
@@ -44,11 +45,38 @@ public class NT4Util {
 	 * @return False if the table key already exists with a different type
 	 */
 	public static boolean putPose2d(String key, Pose2d... value) {
-		Pose3d[] val3d = new Pose3d[value.length];
+		double[] data = new double[value.length * 3];
+		int ndx = 0;
 		for (int i = 0; i < value.length; i++) {
-			val3d[i] = new Pose3d(value[i]);
+			Pose2d pos = value[i];
+			data[ndx] = pos.getX();
+			data[ndx + 1] = pos.getY();
+			data[ndx + 2] = pos.getRotation().getDegrees();
+			ndx += 3;
 		}
-		return NT4Util.putPose3d(key, val3d);
+		return SmartDashboard.putNumberArray(key, data);
 	}
 
+	/**
+	 * Put a Trajectory into a table
+	 *
+	 * @param key
+	 * @param value
+	 * @return False if the table key already exists with a different type
+	 */
+	public static boolean putTrajectory(String key, Trajectory value) {
+		var states = value.getStates();
+		// Pose2d[] pose2ds = new Pose2d[states.size()];
+		double[] data = new double[states.size() * 3];
+		int ndx = 0;
+		for (int i = 0; i < states.size(); i++) {
+			Pose2d pos = states.get(i).poseMeters;
+			data[ndx] = pos.getX();
+			data[ndx + 1] = pos.getY();
+			data[ndx + 2] = pos.getRotation().getDegrees();
+			ndx += 3;
+		}
+
+		return SmartDashboard.putNumberArray(key, data);
+	}
 }
