@@ -5,9 +5,8 @@ import edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints;
 import edu.wpi.first.util.sendable.SendableBuilder;
 
 /**
- * A wrapper for {@link edu.wpi.first.wpilibj.controller.ProfiledPIDController
- * ProfiledPIDController} that allows for trapezoidal profile constraints to be
- * tuned in real-time via NetworkTables.
+ * A wrapper for ProfiledPIDController that allows for trapezoidal profile
+ * constraints to be tuned in real-time via NetworkTables.
  *
  * <p>
  * The following values are published to NetworkTables for tuning and
