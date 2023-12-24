@@ -192,7 +192,6 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 			if (this.interceptKey.equals(key)) {
 				this.intercept = setter;
 				this.builder.addStringProperty(key, getter, this::proxy);
-				// this.intercept = null;
 			} else {
 				this.builder.addStringProperty(key, getter, setter);
 			}

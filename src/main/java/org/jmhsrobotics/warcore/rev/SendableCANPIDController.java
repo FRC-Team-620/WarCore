@@ -68,7 +68,7 @@ public class SendableCANPIDController implements Sendable {
 	}
 
 	@Override
-	public void initSendable(SendableBuilder builder) {
+	public void initSendable(SendableBuilder builder) { // TODO: add IZone support
 		builder.setSmartDashboardType("PIDController");
 		builder.addDoubleProperty("p", this.pid::getP, this.pid::setP);
 		builder.addDoubleProperty("i", this.pid::getI, this.pid::setI);

@@ -6,7 +6,7 @@
 
 
 
-## Installation 
+## Installation
 
 1. Add the following to your build.gradle, This allows you to pull the dependencies needed from a github repository:
 
