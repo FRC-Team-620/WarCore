@@ -25,7 +25,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class TrajectorySelector extends SendableChooser<Trajectory> {
 	private Field2d field;
 
-
 	/**
 	 * Class to automatically load and display Trajectory information. This class
 	 * will automatically scan a selected dir (shallow scan) and attempt to load
@@ -80,7 +79,6 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 		}
 
 	}
-
 
 	/**
 	 * Called when a selection on smardashboard is made.

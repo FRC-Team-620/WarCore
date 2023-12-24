@@ -5,28 +5,77 @@ import edu.wpi.first.math.trajectory.TrapezoidProfile.Constraints;
 import edu.wpi.first.util.sendable.SendableBuilder;
 
 /**
- * Implements a PID control loop whose setpoint is constrained by a trapezoid
- * profile. Users should call reset() when they first start running the
- * controller to avoid unwanted behavior.
+ * A wrapper for {@link edu.wpi.first.wpilibj.controller.ProfiledPIDController
+ * ProfiledPIDController} that allows for trapezoidal profile constraints to be
+ * tuned in real-time via NetworkTables.
+ *
+ * <p>
+ * The following values are published to NetworkTables for tuning and
+ * monitoring:
+ * <ul>
+ * <li>"p": Proportional gain of the PID controller.</li>
+ * <li>"i": Integral gain of the PID controller.</li>
+ * <li>"d": Derivative gain of the PID controller.</li>
+ * <li>"goal": The target position of the motion profile.</li>
+ * <li>"maxAcc": Maximum acceleration constraint of the motion profile.</li>
+ * <li>"maxVel": Maximum velocity constraint of the motion profile .</li>
+ * <li>"[RO] setpoint pos": Read-only property for the current setpoint
+ * position.</li>
+ * <li>"[RO] setpoint vel": Read-only property for the current setpoint
+ * velocity.</li>
+ * <li>"[RO] in": Read-only property for the current input value.</li>
+ * <li>"[RO] out": Read-only property for the current output value.</li>
+ * </ul>
  */
 public class TuneableProfiledPIDController extends ProfiledPIDController {
 	private Constraints consts;
 	private double in, out;
 
+	/**
+	 * Allocates a TuneableProfiledPIDController with the given constants for Kp,
+	 * Ki, and Kd.
+	 *
+	 * @param Kp
+	 *            The proportional coefficient.
+	 * @param Ki
+	 *            The integral coefficient.
+	 * @param Kd
+	 *            The derivative coefficient.
+	 * @param constraints
+	 *            Velocity and acceleration constraints for goal.
+	 * @param period
+	 *            The period between controller updates in seconds. The default is
+	 *            0.02 seconds.
+	 */
 	public TuneableProfiledPIDController(double Kp, double Ki, double Kd, Constraints constraints, double period) {
 		super(Kp, Ki, Kd, constraints, period);
 		this.consts = constraints;
 	}
 
+	/**
+	 * Allocates a TuneableProfiledPIDController with the given constants for Kp,
+	 * Ki, and Kd.
+	 *
+	 * @param Kp
+	 *            The proportional coefficient.
+	 * @param Ki
+	 *            The integral coefficient.
+	 * @param Kd
+	 *            The derivative coefficient.
+	 * @param constraints
+	 *            Velocity and acceleration constraints for goal.
+	 */
 	public TuneableProfiledPIDController(double Kp, double Ki, double Kd, Constraints constraints) {
 		super(Kp, Ki, Kd, constraints);
 		this.consts = constraints;
 	}
+
 	@Override
 	public void setConstraints(Constraints constraints) {
 		super.setConstraints(constraints);
 		this.consts = constraints;
 	}
+
 	@Override
 	public double calculate(double measurement) {
 		this.in = measurement;

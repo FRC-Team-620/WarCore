@@ -98,8 +98,8 @@ public class SwerveVisualizer {
 	 *            The angle to rotate about the origin
 	 * @return Pose2d
 	 */
-	private Pose2d revolveObject(Translation2d relativePos, Pose2d rotateOrigin, Rotation2d rotateAngle) { 
-		//TODO: Replace with PoseUtil Revolve
+	private Pose2d revolveObject(Translation2d relativePos, Pose2d rotateOrigin, Rotation2d rotateAngle) {
+		// TODO: Replace with PoseUtil Revolve
 		Transform2d rotDelta = new Transform2d(relativePos, rotateAngle);
 		return new Pose2d(
 				rotDelta.getTranslation().rotateBy(rotateOrigin.getRotation()).plus(rotateOrigin.getTranslation()),
