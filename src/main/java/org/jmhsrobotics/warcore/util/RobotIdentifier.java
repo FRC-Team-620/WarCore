@@ -29,7 +29,8 @@ public class RobotIdentifier<V> {
 	}
 
 	/**
-	 * Associates a specific MAC Address with a value.
+	 * Associates a specific MAC Address with a value. If no default is set, it is
+	 * assumed the first addition is the default value.
 	 *
 	 * @param mac
 	 *            The MAC Address of the roboRIO.
@@ -37,6 +38,9 @@ public class RobotIdentifier<V> {
 	 *            The value associated with the MAC Address.
 	 */
 	public void addRobot(MACAddress mac, V value) {
+		if (defaultVal == null) {
+			this.defaultVal = value;
+		}
 		this.robotMap.put(mac, value);
 	}
 

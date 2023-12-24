@@ -24,10 +24,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class TrajectorySelector extends SendableChooser<Trajectory> {
 	private Field2d field;
-	private Trajectory part1;
-	private Trajectory part2;
-	private Trajectory part3;
-	private Trajectory part4;
+
 
 	/**
 	 * Class to automatically load and display Trajectory information. This class
@@ -46,7 +43,7 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 
 	public TrajectorySelector(Path directory, boolean defaultFirst) {
 		super();
-		this.loadTajectorys(directory, defaultFirst);
+		this.loadTrajectories(directory, defaultFirst);
 		SmartDashboard.putData(this);// Not sure if I should automatically add this to the dashboard or not.
 	}
 
@@ -59,7 +56,7 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 	 *            Wether or not to set the first found file as the default value.
 	 *            See getSelection()
 	 */
-	private void loadTajectorys(Path directory, boolean defaultFirst) {
+	public void loadTrajectories(Path directory, boolean defaultFirst) {
 		var files = directory.toFile().listFiles();// May want to filter files that only end with wpilib.json
 		for (File file : files) {
 			if (!file.isFile()) {
@@ -75,15 +72,6 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 				} else {
 					this.addOption("* " + name, traj);// Add star to paths imported from disk scan
 				}
-				if (name.equals("Part1")) {
-					part1 = traj;
-				} else if (name.equals("Part2")) {
-					part2 = traj;
-				} else if (name.equals("Part3")) {
-					part3 = traj;
-				} else if (name.equals("Part4")) {
-					part4 = traj;
-				}
 			} catch (IOException e) {
 				e.printStackTrace();
 				DriverStation.reportError("Unable to open trajectory: " + file.getPath(), e.getStackTrace());
@@ -93,21 +81,6 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 
 	}
 
-	public Trajectory getPart1() {
-		return part1;
-	}
-
-	public Trajectory getPart2() {
-		return part2;
-	}
-
-	public Trajectory getPart3() {
-		return part3;
-	}
-
-	public Trajectory getPart4() {
-		return part4;
-	}
 
 	/**
 	 * Called when a selection on smardashboard is made.
