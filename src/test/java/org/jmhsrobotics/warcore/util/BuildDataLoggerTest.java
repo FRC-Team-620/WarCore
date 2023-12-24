@@ -1,11 +1,5 @@
 package org.jmhsrobotics.warcore.util;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.junit.jupiter.api.Test;
-
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-
 public class BuildDataLoggerTest {
 	// @Test
 	// void testDataLog() { //TODO: Fix test
@@ -17,22 +11,32 @@ public class BuildDataLoggerTest {
 	// // d.close();
 
 	// }
-    //TODO: Fix need to start up a NT server for this to work
+	// TODO: Fix need to start up a NT server for this to work
 	// @Test
 	// void testNTLog() {
-	// 	BuildDataLogger.LogToNetworkTables(BuildConstants.class);
-	// 	String TABLE_NAME = "BuildInfo";
-	// 	assertEquals(BuildConstants.MAVEN_GROUP, SmartDashboard.getString(TABLE_NAME + "/MAVEN_GROUP", null));
-	// 	assertEquals(BuildConstants.MAVEN_NAME, SmartDashboard.getString(TABLE_NAME + "/MAVEN_NAME", null));
-	// 	assertEquals(BuildConstants.VERSION, SmartDashboard.getString(TABLE_NAME + "/VERSION", null));
-	// 	assertEquals(BuildConstants.GIT_REVISION, SmartDashboard.getNumber(TABLE_NAME + "/GIT_REVISION", 0.0), 0.0);
-	// 	assertEquals(BuildConstants.GIT_SHA, SmartDashboard.getString(TABLE_NAME + "/GIT_SHA", null));
-	// 	assertEquals(BuildConstants.GIT_DATE, SmartDashboard.getString(TABLE_NAME + "/GIT_DATE", null));
-	// 	assertEquals(BuildConstants.GIT_BRANCH, SmartDashboard.getString(TABLE_NAME + "/GIT_BRANCH", null));
-	// 	assertEquals(BuildConstants.BUILD_DATE, SmartDashboard.getString(TABLE_NAME + "/BUILD_DATE", null));
-	// 	assertEquals(BuildConstants.BUILD_UNIX_TIME, SmartDashboard.getNumber(TABLE_NAME + "/BUILD_UNIX_TIME", 0.0),
-	// 			0.0);
-	// 	assertEquals(BuildConstants.DIRTY, SmartDashboard.getNumber(TABLE_NAME + "/DIRTY", 0.0), 0.0);
+	// BuildDataLogger.LogToNetworkTables(BuildConstants.class);
+	// String TABLE_NAME = "BuildInfo";
+	// assertEquals(BuildConstants.MAVEN_GROUP, SmartDashboard.getString(TABLE_NAME
+	// + "/MAVEN_GROUP", null));
+	// assertEquals(BuildConstants.MAVEN_NAME, SmartDashboard.getString(TABLE_NAME +
+	// "/MAVEN_NAME", null));
+	// assertEquals(BuildConstants.VERSION, SmartDashboard.getString(TABLE_NAME +
+	// "/VERSION", null));
+	// assertEquals(BuildConstants.GIT_REVISION, SmartDashboard.getNumber(TABLE_NAME
+	// + "/GIT_REVISION", 0.0), 0.0);
+	// assertEquals(BuildConstants.GIT_SHA, SmartDashboard.getString(TABLE_NAME +
+	// "/GIT_SHA", null));
+	// assertEquals(BuildConstants.GIT_DATE, SmartDashboard.getString(TABLE_NAME +
+	// "/GIT_DATE", null));
+	// assertEquals(BuildConstants.GIT_BRANCH, SmartDashboard.getString(TABLE_NAME +
+	// "/GIT_BRANCH", null));
+	// assertEquals(BuildConstants.BUILD_DATE, SmartDashboard.getString(TABLE_NAME +
+	// "/BUILD_DATE", null));
+	// assertEquals(BuildConstants.BUILD_UNIX_TIME,
+	// SmartDashboard.getNumber(TABLE_NAME + "/BUILD_UNIX_TIME", 0.0),
+	// 0.0);
+	// assertEquals(BuildConstants.DIRTY, SmartDashboard.getNumber(TABLE_NAME +
+	// "/DIRTY", 0.0), 0.0);
 	// }
 
 	public final class BuildConstants {
