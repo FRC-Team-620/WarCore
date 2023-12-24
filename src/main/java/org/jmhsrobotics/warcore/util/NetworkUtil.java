@@ -4,6 +4,8 @@ import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.Arrays;
 
+import edu.wpi.first.wpilibj.RobotBase;
+
 /**
  * The `NetworkUtil` class provides utility methods for working with
  * network-related operations
@@ -11,6 +13,7 @@ import java.util.Arrays;
 public final class NetworkUtil {
 
 	private static final String networkInterface = "eth0";
+	public static final MACAddress SIMULATION_MAC = new MACAddress("DE:AD:BE:EF:C0:DE");
 
 	/**
 	 * Retrieves the MAC address for a network interface with the specified name.
@@ -32,11 +35,16 @@ public final class NetworkUtil {
 	 * Retrieves the MAC address for the default network interface.
 	 *
 	 * @return A `MACAddress` object representing the MAC address of the default
-	 *         network interface.
+	 *         network interface of the RIO. If run in simulation it returns a
+	 *         placeholder mac address of "DE:AD:BE:EF:C0:DE"
 	 * @throws SocketException
 	 *             If an error occurs while attempting to retrieve the MAC address.
 	 */
 	public static MACAddress getMacAddress() throws SocketException {
+		// NetworkInterface.getByName(networkInterface)
+		if (RobotBase.isSimulation()) {
+			return NetworkUtil.SIMULATION_MAC;
+		}
 		return NetworkUtil.getMacAddress(networkInterface);
 	}
 
