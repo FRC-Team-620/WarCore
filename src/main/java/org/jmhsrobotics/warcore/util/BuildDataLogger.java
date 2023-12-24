@@ -42,7 +42,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * </pre>
  *
  * Note that the class package may vary based on your project structure.
- * </p>
  * <p>
  * Example of how to utilize this class:
  *
@@ -57,7 +56,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  *
  * }
  * </pre>
- * </p>
+ *
  */
 public class BuildDataLogger {
 	/**
