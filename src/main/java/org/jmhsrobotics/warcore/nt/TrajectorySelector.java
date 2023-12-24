@@ -13,12 +13,10 @@ import java.util.function.Supplier;
 
 import edu.wpi.first.math.trajectory.Trajectory;
 import edu.wpi.first.math.trajectory.TrajectoryUtil;
-import edu.wpi.first.networktables.NTSendableBuilder;
-import edu.wpi.first.networktables.NetworkTable;
-import edu.wpi.first.networktables.Topic;
 import edu.wpi.first.util.function.BooleanConsumer;
 import edu.wpi.first.util.function.FloatConsumer;
 import edu.wpi.first.util.function.FloatSupplier;
+import edu.wpi.first.util.sendable.SendableBuilder;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -136,7 +134,7 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 	}
 
 	@Override
-	public void initSendable(NTSendableBuilder builder) {
+	public void initSendable(SendableBuilder builder) {
 		// Ignore this this is a supper janky way to detect when the selection is
 		// changed. I should switch this to use Network tables EntryListener.
 		// All this nonesne was to avoid needing to use refelction.
@@ -144,12 +142,12 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 		super.initSendable(buildProxy);
 	}
 
-	private class Jank implements NTSendableBuilder {
-		NTSendableBuilder builder;
+	private class Jank implements SendableBuilder {
+		SendableBuilder builder;
 		String interceptKey;
 		Consumer<String> intercept, callback;
 
-		public Jank(NTSendableBuilder builder, String interceptKey, Consumer<String> callback) {
+		public Jank(SendableBuilder builder, String interceptKey, Consumer<String> callback) {
 			this.callback = callback;
 			this.builder = builder;
 			this.interceptKey = interceptKey;
@@ -177,11 +175,6 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 		public void addStringArrayProperty(String key, Supplier<String[]> getter, Consumer<String[]> setter) {
 			this.builder.addStringArrayProperty(key, getter, setter);
 
-		}
-
-		@Override
-		public NetworkTable getTable() {
-			return this.builder.getTable();
 		}
 
 		@Override
@@ -232,11 +225,6 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 		}
 
 		@Override
-		public void setUpdateTable(Runnable func) {
-			this.builder.setUpdateTable(func);
-		}
-
-		@Override
 		public void setSafeState(Runnable func) {
 			this.builder.setSafeState(func);
 		}
@@ -278,8 +266,64 @@ public class TrajectorySelector extends SendableChooser<Trajectory> {
 		}
 
 		@Override
-		public Topic getTopic(String key) {
-			return this.builder.getTopic(key);
+		public void publishConstBoolean(String key, boolean value) {
+			this.builder.publishConstBoolean(key, value);
 		}
+
+		@Override
+		public void publishConstInteger(String key, long value) {
+			this.builder.publishConstInteger(key, value);
+		}
+
+		@Override
+		public void publishConstFloat(String key, float value) {
+			this.builder.publishConstFloat(key, value);
+		}
+
+		@Override
+		public void publishConstDouble(String key, double value) {
+			this.builder.publishConstDouble(key, value);
+		}
+
+		@Override
+		public void publishConstString(String key, String value) {
+			this.builder.publishConstString(key, value);
+		}
+
+		@Override
+		public void publishConstBooleanArray(String key, boolean[] value) {
+			this.builder.publishConstBooleanArray(key, value);
+		}
+
+		@Override
+		public void publishConstIntegerArray(String key, long[] value) {
+			this.builder.publishConstIntegerArray(key, value);
+		}
+
+		@Override
+		public void publishConstFloatArray(String key, float[] value) {
+			this.builder.publishConstFloatArray(key, value);
+		}
+
+		@Override
+		public void publishConstDoubleArray(String key, double[] value) {
+			this.builder.publishConstDoubleArray(key, value);
+		}
+
+		@Override
+		public void publishConstStringArray(String key, String[] value) {
+			this.builder.publishConstStringArray(key, value);
+		}
+
+		@Override
+		public void publishConstRaw(String key, String typeString, byte[] value) {
+			this.builder.publishConstRaw(key, typeString, value);
+		}
+
+		@Override
+		public BackendKind getBackendKind() {
+			return this.builder.getBackendKind();
+		}
+
 	}
 }
