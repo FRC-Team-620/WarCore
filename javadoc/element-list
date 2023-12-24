@@ -5,3 +5,4 @@ org.jmhsrobotics.warcore.rev
 org.jmhsrobotics.warcore.sim
 org.jmhsrobotics.warcore.swerve
 org.jmhsrobotics.warcore.util
+org.jmhsrobotics.warcore.util.tuning
