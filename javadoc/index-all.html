@@ -429,7 +429,7 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html" class="type-name-link" title="class in org.jmhsrobotics.warcore.rev">SendableCANPIDController</a> - Class in <a href="org/jmhsrobotics/warcore/rev/package-summary.html">org.jmhsrobotics.warcore.rev</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html#%3Cinit%3E(com.revrobotics.SparkMaxPIDController,com.revrobotics.CANSparkMax.ControlType)" class="member-name-link">SendableCANPIDController(SparkMaxPIDController, CANSparkMax.ControlType)</a> - Constructor for class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html" title="class in org.jmhsrobotics.warcore.rev">SendableCANPIDController</a></dt>
+<dt><a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html#%3Cinit%3E(com.revrobotics.SparkPIDController,com.revrobotics.CANSparkBase.ControlType)" class="member-name-link">SendableCANPIDController(SparkPIDController, CANSparkBase.ControlType)</a> - Constructor for class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html" title="class in org.jmhsrobotics.warcore.rev">SendableCANPIDController</a></dt>
 <dd>
 <div class="block">A wraper class to allow Sparkmax pidloops to be tuned from within
  smartdashboard or glass.</div>
@@ -472,7 +472,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Sets the offset angle in the Y direction.</div>
 </dd>
-<dt><a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html#setPIDControlType(com.revrobotics.CANSparkMax.ControlType)" class="member-name-link">setPIDControlType(CANSparkMax.ControlType)</a> - Method in class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html" title="class in org.jmhsrobotics.warcore.rev">SparkPIDDrivewrapper</a></dt>
+<dt><a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html#setPIDControlType(com.revrobotics.CANSparkBase.ControlType)" class="member-name-link">setPIDControlType(CANSparkBase.ControlType)</a> - Method in class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html" title="class in org.jmhsrobotics.warcore.rev">SparkPIDDrivewrapper</a></dt>
 <dd>
 <div class="block">Set the Control type to be used when the set method is called.</div>
 </dd>
@@ -484,7 +484,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Sets the Reference for the PID loop.</div>
 </dd>
-<dt><a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html#setSetpoint(double,com.revrobotics.CANSparkMax.ControlType)" class="member-name-link">setSetpoint(double, CANSparkMax.ControlType)</a> - Method in class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html" title="class in org.jmhsrobotics.warcore.rev">SendableCANPIDController</a></dt>
+<dt><a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html#setSetpoint(double,com.revrobotics.CANSparkBase.ControlType)" class="member-name-link">setSetpoint(double, CANSparkBase.ControlType)</a> - Method in class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SendableCANPIDController.html" title="class in org.jmhsrobotics.warcore.rev">SendableCANPIDController</a></dt>
 <dd>
 <div class="block">Sets the Reference for the PID loop including the control mode</div>
 </dd>
@@ -505,7 +505,7 @@ loadScripts(document, 'script');</script>
 <div class="block">The `SimSparkMax` class extends `CANSparkMax` to provide enhanced simulation
  support for Spark MAX motor controllers.</div>
 </dd>
-<dt><a href="org/jmhsrobotics/warcore/rev/SimSparkMax.html#%3Cinit%3E(int,com.revrobotics.CANSparkMaxLowLevel.MotorType)" class="member-name-link">SimSparkMax(int, CANSparkMaxLowLevel.MotorType)</a> - Constructor for class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SimSparkMax.html" title="class in org.jmhsrobotics.warcore.rev">SimSparkMax</a></dt>
+<dt><a href="org/jmhsrobotics/warcore/rev/SimSparkMax.html#%3Cinit%3E(int,com.revrobotics.CANSparkLowLevel.MotorType)" class="member-name-link">SimSparkMax(int, CANSparkLowLevel.MotorType)</a> - Constructor for class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SimSparkMax.html" title="class in org.jmhsrobotics.warcore.rev">SimSparkMax</a></dt>
 <dd>
 <div class="block">Constructs a new `SimSparkMax` instance with the specified device ID and
  motor type.</div>
@@ -514,7 +514,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html" class="type-name-link" title="class in org.jmhsrobotics.warcore.rev">SparkPIDDrivewrapper</a> - Class in <a href="org/jmhsrobotics/warcore/rev/package-summary.html">org.jmhsrobotics.warcore.rev</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html#%3Cinit%3E(int,com.revrobotics.CANSparkMaxLowLevel.MotorType,com.revrobotics.CANSparkMax.ControlType)" class="member-name-link">SparkPIDDrivewrapper(int, CANSparkMaxLowLevel.MotorType, CANSparkMax.ControlType)</a> - Constructor for class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html" title="class in org.jmhsrobotics.warcore.rev">SparkPIDDrivewrapper</a></dt>
+<dt><a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html#%3Cinit%3E(int,com.revrobotics.CANSparkLowLevel.MotorType,com.revrobotics.CANSparkBase.ControlType)" class="member-name-link">SparkPIDDrivewrapper(int, CANSparkLowLevel.MotorType, CANSparkBase.ControlType)</a> - Constructor for class org.jmhsrobotics.warcore.rev.<a href="org/jmhsrobotics/warcore/rev/SparkPIDDrivewrapper.html" title="class in org.jmhsrobotics.warcore.rev">SparkPIDDrivewrapper</a></dt>
 <dd>
 <div class="block">Wraper class to override the Set method to use the pid contollers
  SetReference.</div>
