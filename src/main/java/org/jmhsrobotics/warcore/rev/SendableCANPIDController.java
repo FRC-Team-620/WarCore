@@ -1,7 +1,7 @@
 package org.jmhsrobotics.warcore.rev;
 
-import com.revrobotics.SparkMaxPIDController;
-import com.revrobotics.CANSparkMax.ControlType;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.SparkPIDController;
 
 import edu.wpi.first.util.sendable.Sendable;
 import edu.wpi.first.util.sendable.SendableBuilder;
@@ -9,9 +9,9 @@ import edu.wpi.first.util.sendable.SendableRegistry;
 
 public class SendableCANPIDController implements Sendable {
 	private static int instances = 10;
-	private SparkMaxPIDController pid;
+	private SparkPIDController pid;
 	private double lastSetpoint = Double.NaN;
-	private ControlType controlType;
+	private CANSparkMax.ControlType controlType;
 
 	/**
 	 * A wraper class to allow Sparkmax pidloops to be tuned from within
@@ -23,7 +23,7 @@ public class SendableCANPIDController implements Sendable {
 	 * @param controlType
 	 *            Control type to be used when setpoint is set.
 	 */
-	public SendableCANPIDController(SparkMaxPIDController pid, ControlType controlType) {
+	public SendableCANPIDController(SparkPIDController pid, CANSparkMax.ControlType controlType) {
 		this.pid = pid;
 		this.controlType = controlType;
 		SendableRegistry.addLW(this, "PIDController", instances++); // TODO: do a less janky solution to this.
@@ -49,7 +49,7 @@ public class SendableCANPIDController implements Sendable {
 	 * @param controlType
 	 *            Control mode to use
 	 */
-	public void setSetpoint(double setpoint, ControlType controlType) {
+	public void setSetpoint(double setpoint, CANSparkMax.ControlType controlType) {
 		this.lastSetpoint = setpoint;
 		this.pid.setReference(setpoint, controlType);
 	}
