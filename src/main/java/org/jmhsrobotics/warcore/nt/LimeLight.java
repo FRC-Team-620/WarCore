@@ -27,7 +27,8 @@ public class LimeLight {
 	 */
 	// TODO: Include Support for Flashing
 	public enum LedMode {
-		OFF(1), ON(3);
+		OFF(1),
+		ON(3);
 
 		private final int value;
 

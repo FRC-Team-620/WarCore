@@ -101,6 +101,7 @@ public class BuildDataLogger {
 		}
 
 	}
+
 	/**
 	 * Logs the Git status information to NetworkTables (SmartDashboard).
 	 *

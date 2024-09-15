@@ -55,7 +55,7 @@ public class RobotMathTest {
 
 	@Test
 	void testSumForEach() {
-		Integer[] values = {1, 2, 3, 4, 5};
+		Integer[] values = { 1, 2, 3, 4, 5 };
 		double sum = RobotMath.sumForEach(values, Integer::doubleValue);
 		assertEquals(15.0, sum, 1e-5);
 	}

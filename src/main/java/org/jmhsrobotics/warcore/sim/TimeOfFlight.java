@@ -12,9 +12,9 @@ public class TimeOfFlight extends com.playingwithfusion.TimeOfFlight {
 	private SimBoolean rangeValid;
 	private SimDouble range, rangeSigma, ambientLight, sampleTime;
 	private SimEnum status, rangeMode;
-	private static final String[] STATUS_STRINGS = new String[]{"Valid", "SigmaHigh", "ReturnSignalLow",
-			"ReturnPhaseBad", "HardwareFailure", "WrappedTarget", "InternalError", "Invalid"};
-	private static final String[] MODE_STRINGS = new String[]{"Short", "Medium", "Long"};
+	private static final String[] STATUS_STRINGS = new String[] { "Valid", "SigmaHigh", "ReturnSignalLow",
+			"ReturnPhaseBad", "HardwareFailure", "WrappedTarget", "InternalError", "Invalid" };
+	private static final String[] MODE_STRINGS = new String[] { "Short", "Medium", "Long" };
 
 	public final int canId;
 
