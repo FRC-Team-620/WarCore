@@ -16,9 +16,9 @@ public class NetworkUtilTest {
 	@Test
 	void testEquals() {
 
-		MACAddress same1 = new MACAddress(new byte[]{3, -128, 47, 32, 12, -120});
-		MACAddress same2 = new MACAddress(new byte[]{3, -128, 47, 32, 12, -120});
-		MACAddress diff = new MACAddress(new byte[]{5, -122, 41, 35, 15, -110});
+		MACAddress same1 = new MACAddress(new byte[] { 3, -128, 47, 32, 12, -120 });
+		MACAddress same2 = new MACAddress(new byte[] { 3, -128, 47, 32, 12, -120 });
+		MACAddress diff = new MACAddress(new byte[] { 5, -122, 41, 35, 15, -110 });
 		assertTrue(same1.equals(same2));
 		assertTrue(same2.equals(same1));
 		assertFalse(diff.equals(same1));
@@ -31,15 +31,16 @@ public class NetworkUtilTest {
 		same1.hashCode();
 		new NetworkUtil();
 	}
+
 	@Test
 	void testToString() {
-		MACAddress same1 = new MACAddress(new byte[]{3, -128, 47, 32, 12, -120});
+		MACAddress same1 = new MACAddress(new byte[] { 3, -128, 47, 32, 12, -120 });
 		assertEquals("03:80:2F:20:0C:88", same1.toString());
 	}
 
 	@Test
 	void testStringParsing() {
-		MACAddress same1 = new MACAddress(new byte[]{3, -128, 47, 32, 12, -120});
+		MACAddress same1 = new MACAddress(new byte[] { 3, -128, 47, 32, 12, -120 });
 		assertEquals(same1, new MACAddress("03:80:2F:20:0C:88"));
 		assertEquals(same1, new MACAddress("0380:2F20:0C88"));
 		assertEquals(same1, new MACAddress("03802F200C88"));

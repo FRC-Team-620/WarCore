@@ -33,12 +33,15 @@ public class SimTimeOfFlight {
 	public void setRangeValid(boolean isValid) {
 		this.rangeValid.set(isValid);
 	}
+
 	public void setRangeSigma(double sigma) {
 		this.rangeSigma.set(sigma);
 	}
+
 	public void setAmientLightLevel(double level) {
 		this.ambientLight.set(level);
 	}
+
 	public void setSampleTime(double period) {
 		this.sampleTime.set(period);
 	}

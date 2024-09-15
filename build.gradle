@@ -2,7 +2,7 @@ plugins {
     id "java"
     id "edu.wpi.first.GradleRIO" version "2024.1.1"
     id "maven-publish"
-    id 'com.diffplug.spotless' version '6.12.0'
+    id 'com.diffplug.spotless' version '6.25.0'
     id "jacoco"
 }
 
@@ -123,7 +123,7 @@ spotless {
         }
         toggleOffOn()
         // googleJavaFormat()
-        eclipse()
+        eclipse().configFile("${rootDir}/config/eclipse-formatter.xml")
         removeUnusedImports()
         // indentWithSpaces()
         trimTrailingWhitespace()
