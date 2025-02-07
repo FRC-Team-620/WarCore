@@ -1,8 +1,8 @@
 package org.jmhsrobotics.warcore.rev;
 
-import com.revrobotics.CANSparkMax;
+import com.revrobotics.spark.SparkMax;
 
-public class SparkPIDDrivewrapper extends CANSparkMax {
+public class SparkPIDDrivewrapper extends SparkMax {
 	private ControlType ctl;
 
 	/**
@@ -39,7 +39,7 @@ public class SparkPIDDrivewrapper extends CANSparkMax {
 
 	@Override
 	public void set(double speed) {
-		super.getPIDController().setReference(speed, this.ctl);
+		super.getClosedLoopController().setReference(speed, this.ctl);
 	}
 
 	/**

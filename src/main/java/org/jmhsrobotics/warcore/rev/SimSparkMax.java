@@ -1,6 +1,6 @@
 package org.jmhsrobotics.warcore.rev;
 
-import com.revrobotics.CANSparkMax;
+import com.revrobotics.spark.SparkMax;
 
 import edu.wpi.first.wpilibj.RobotBase;
 
@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.RobotBase;
  * support for Spark MAX motor controllers. It allows you to simulate the
  * behavior of Spark MAX motor controllers in software-based robot simulations.
  */
-public class SimSparkMax extends CANSparkMax {
+public class SimSparkMax extends SparkMax {
 	private double lastSet = 0;
 
 	/**

@@ -1,6 +1,6 @@
 package org.jmhsrobotics.warcore.rev;
 
-import com.revrobotics.CANSparkMax;
+import com.revrobotics.spark.SparkMax;
 
 import edu.wpi.first.hal.SimDouble;
 import edu.wpi.first.wpilibj.simulation.SimDeviceSim;
@@ -21,7 +21,7 @@ public final class RevEncoderSimWrapper extends BaseEncoderWrapper {
 	 *            simulation wrapper.
 	 * @return A new `RevEncoderSimWrapper` instance for simulating encoder data.
 	 */
-	public static RevEncoderSimWrapper create(CANSparkMax motorController) {
+	public static RevEncoderSimWrapper create(SparkMax motorController) {
 		SimDeviceSim deviceSim = new SimDeviceSim("SPARK MAX [" + motorController.getDeviceId() + "]");
 		SimDouble position = deviceSim.getDouble("Position");
 		SimDouble velocity = deviceSim.getDouble("Velocity");
