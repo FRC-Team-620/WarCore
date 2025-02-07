@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
-<script type="text/javascript" src="../../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -93,9 +93,13 @@ implements edu.wpi.first.util.sendable.Sendable</span></div>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.revrobotics.SparkPIDController,com.revrobotics.CANSparkBase.ControlType)" class="member-name-link">SendableCANPIDController</a><wbr>(com.revrobotics.SparkPIDController&nbsp;pid,
- com.revrobotics.CANSparkBase.ControlType&nbsp;controlType)</code></div>
-<div class="col-last even-row-color">
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.revrobotics.spark.SparkClosedLoopController,com.revrobotics.spark.SparkBase.ControlType)" class="member-name-link">SendableCANPIDController</a><wbr>(com.revrobotics.spark.SparkClosedLoopController&nbsp;pid,
+ com.revrobotics.spark.SparkBase.ControlType&nbsp;controlType)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(com.revrobotics.spark.SparkClosedLoopController,com.revrobotics.spark.SparkBase.ControlType,com.revrobotics.spark.ClosedLoopSlot)" class="member-name-link">SendableCANPIDController</a><wbr>(com.revrobotics.spark.SparkClosedLoopController&nbsp;pid,
+ com.revrobotics.spark.SparkBase.ControlType&nbsp;controlType,
+ com.revrobotics.spark.ClosedLoopSlot&nbsp;slot)</code></div>
+<div class="col-last odd-row-color">
 <div class="block">A wraper class to allow Sparkmax pidloops to be tuned from within
  smartdashboard or glass.</div>
 </div>
@@ -128,8 +132,8 @@ implements edu.wpi.first.util.sendable.Sendable</span></div>
 <div class="block">Sets the Reference for the PID loop.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSetpoint(double,com.revrobotics.CANSparkBase.ControlType)" class="member-name-link">setSetpoint</a><wbr>(double&nbsp;setpoint,
- com.revrobotics.CANSparkBase.ControlType&nbsp;controlType)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSetpoint(double,com.revrobotics.spark.SparkBase.ControlType)" class="member-name-link">setSetpoint</a><wbr>(double&nbsp;setpoint,
+ com.revrobotics.spark.SparkBase.ControlType&nbsp;controlType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the Reference for the PID loop including the control mode</div>
 </div>
@@ -151,10 +155,11 @@ implements edu.wpi.first.util.sendable.Sendable</span></div>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.revrobotics.SparkPIDController,com.revrobotics.CANSparkBase.ControlType)">
+<section class="detail" id="&lt;init&gt;(com.revrobotics.spark.SparkClosedLoopController,com.revrobotics.spark.SparkBase.ControlType,com.revrobotics.spark.ClosedLoopSlot)">
 <h3>SendableCANPIDController</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SendableCANPIDController</span><wbr><span class="parameters">(com.revrobotics.SparkPIDController&nbsp;pid,
- com.revrobotics.CANSparkBase.ControlType&nbsp;controlType)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SendableCANPIDController</span><wbr><span class="parameters">(com.revrobotics.spark.SparkClosedLoopController&nbsp;pid,
+ com.revrobotics.spark.SparkBase.ControlType&nbsp;controlType,
+ com.revrobotics.spark.ClosedLoopSlot&nbsp;slot)</span></div>
 <div class="block">A wraper class to allow Sparkmax pidloops to be tuned from within
  smartdashboard or glass. Add this display with SmartDashboard.putData(new
  SendableCANPIDController(args));</div>
@@ -162,7 +167,15 @@ implements edu.wpi.first.util.sendable.Sendable</span></div>
 <dt>Parameters:</dt>
 <dd><code>pid</code> - PID loop to use</dd>
 <dd><code>controlType</code> - Control type to be used when setpoint is set.</dd>
+<dd><code>slot</code> - PID slot</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(com.revrobotics.spark.SparkClosedLoopController,com.revrobotics.spark.SparkBase.ControlType)">
+<h3>SendableCANPIDController</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SendableCANPIDController</span><wbr><span class="parameters">(com.revrobotics.spark.SparkClosedLoopController&nbsp;pid,
+ com.revrobotics.spark.SparkBase.ControlType&nbsp;controlType)</span></div>
 </section>
 </li>
 </ul>
@@ -186,10 +199,10 @@ implements edu.wpi.first.util.sendable.Sendable</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="setSetpoint(double,com.revrobotics.CANSparkBase.ControlType)">
+<section class="detail" id="setSetpoint(double,com.revrobotics.spark.SparkBase.ControlType)">
 <h3>setSetpoint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSetpoint</span><wbr><span class="parameters">(double&nbsp;setpoint,
- com.revrobotics.CANSparkBase.ControlType&nbsp;controlType)</span></div>
+ com.revrobotics.spark.SparkBase.ControlType&nbsp;controlType)</span></div>
 <div class="block">Sets the Reference for the PID loop including the control mode</div>
 <dl class="notes">
 <dt>Parameters:</dt>

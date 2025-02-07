@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
-<script type="text/javascript" src="../../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -71,9 +71,9 @@ loadScripts(document, 'script');</script>
 <h1 title="Class SparkPIDDrivewrapper" class="title">Class SparkPIDDrivewrapper</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">com.revrobotics.CANSparkLowLevel
-<div class="inheritance">com.revrobotics.CANSparkBase
-<div class="inheritance">com.revrobotics.CANSparkMax
+<div class="inheritance">com.revrobotics.spark.SparkLowLevel
+<div class="inheritance">com.revrobotics.spark.SparkBase
+<div class="inheritance">com.revrobotics.spark.SparkMax
 <div class="inheritance">org.jmhsrobotics.warcore.rev.SparkPIDDrivewrapper</div>
 </div>
 </div>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">SparkPIDDrivewrapper</span>
-<span class="extends-implements">extends com.revrobotics.CANSparkMax</span></div>
+<span class="extends-implements">extends com.revrobotics.spark.SparkMax</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -95,11 +95,11 @@ loadScripts(document, 'script');</script>
 <section class="nested-class-summary" id="nested-class-summary">
 <h2>Nested Class Summary</h2>
 <div class="inherited-list">
-<h2 id="nested-classes-inherited-from-class-com.revrobotics.CANSparkBase">Nested classes/interfaces inherited from class&nbsp;com.revrobotics.CANSparkBase</h2>
-<code>com.revrobotics.CANSparkBase.ControlType, com.revrobotics.CANSparkBase.ExternalFollower, com.revrobotics.CANSparkBase.FaultID, com.revrobotics.CANSparkBase.IdleMode, com.revrobotics.CANSparkBase.InputMode, com.revrobotics.CANSparkBase.SoftLimitDirection</code></div>
+<h2 id="nested-classes-inherited-from-class-com.revrobotics.spark.SparkBase">Nested classes/interfaces inherited from class&nbsp;com.revrobotics.spark.SparkBase</h2>
+<code>com.revrobotics.spark.SparkBase.ControlType, com.revrobotics.spark.SparkBase.Faults, com.revrobotics.spark.SparkBase.PersistMode, com.revrobotics.spark.SparkBase.ResetMode, com.revrobotics.spark.SparkBase.Warnings</code></div>
 <div class="inherited-list">
-<h2 id="nested-classes-inherited-from-class-com.revrobotics.CANSparkLowLevel">Nested classes/interfaces inherited from class&nbsp;com.revrobotics.CANSparkLowLevel</h2>
-<code>com.revrobotics.CANSparkLowLevel.FollowConfig, com.revrobotics.CANSparkLowLevel.MotorType, com.revrobotics.CANSparkLowLevel.PeriodicFrame, com.revrobotics.CANSparkLowLevel.PeriodicStatus0, com.revrobotics.CANSparkLowLevel.PeriodicStatus1, com.revrobotics.CANSparkLowLevel.PeriodicStatus2, com.revrobotics.CANSparkLowLevel.SparkModel</code></div>
+<h2 id="nested-classes-inherited-from-class-com.revrobotics.spark.SparkLowLevel">Nested classes/interfaces inherited from class&nbsp;com.revrobotics.spark.SparkLowLevel</h2>
+<code>com.revrobotics.spark.SparkLowLevel.MotorType, com.revrobotics.spark.SparkLowLevel.PeriodicFrame, com.revrobotics.spark.SparkLowLevel.PeriodicStatus0, com.revrobotics.spark.SparkLowLevel.PeriodicStatus1, com.revrobotics.spark.SparkLowLevel.PeriodicStatus2, com.revrobotics.spark.SparkLowLevel.SparkModel</code></div>
 </section>
 </li>
 <!-- =========== FIELD SUMMARY =========== -->
@@ -107,8 +107,14 @@ loadScripts(document, 'script');</script>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
 <div class="inherited-list">
-<h3 id="fields-inherited-from-class-com.revrobotics.CANSparkLowLevel">Fields inherited from class&nbsp;com.revrobotics.CANSparkLowLevel</h3>
-<code>isClosed, kAPIBuildVersion, kAPIMajorVersion, kAPIMinorVersion, kAPIVersion, motorType, sparkMaxHandle</code></div>
+<h3 id="fields-inherited-from-class-com.revrobotics.spark.SparkMax">Fields inherited from class&nbsp;com.revrobotics.spark.SparkMax</h3>
+<code>configAccessor</code></div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-com.revrobotics.spark.SparkBase">Fields inherited from class&nbsp;com.revrobotics.spark.SparkBase</h3>
+<code>absoluteEncoder, absoluteEncoderLock, analogSensor, analogSensorLock, closedLoopController, closedLoopControllerLock, encoder, encoderLock, forwardLimitSwitch, forwardLimitSwitchLock, reverseLimitSwitch, reverseLimitSwitchLock</code></div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-com.revrobotics.spark.SparkLowLevel">Fields inherited from class&nbsp;com.revrobotics.spark.SparkLowLevel</h3>
+<code>expectedSparkModel, isClosed, kAPIBuildVersion, kAPIMajorVersion, kAPIMinorVersion, kAPIVersion, motorType, sparkHandle</code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -119,9 +125,9 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,com.revrobotics.CANSparkLowLevel.MotorType,com.revrobotics.CANSparkBase.ControlType)" class="member-name-link">SparkPIDDrivewrapper</a><wbr>(int&nbsp;deviceId,
- com.revrobotics.CANSparkLowLevel.MotorType&nbsp;type,
- com.revrobotics.CANSparkBase.ControlType&nbsp;ctl)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,com.revrobotics.spark.SparkLowLevel.MotorType,com.revrobotics.spark.SparkBase.ControlType)" class="member-name-link">SparkPIDDrivewrapper</a><wbr>(int&nbsp;deviceId,
+ com.revrobotics.spark.SparkLowLevel.MotorType&nbsp;type,
+ com.revrobotics.spark.SparkBase.ControlType&nbsp;ctl)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Wraper class to override the Set method to use the pid contollers
  SetReference.</div>
@@ -140,14 +146,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.revrobotics.CANSparkBase.ControlType</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.revrobotics.spark.SparkBase.ControlType</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPIDControlType()" class="member-name-link">getPIDControlType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#set(double)" class="member-name-link">set</a><wbr>(double&nbsp;speed)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPIDControlType(com.revrobotics.CANSparkBase.ControlType)" class="member-name-link">setPIDControlType</a><wbr>(com.revrobotics.CANSparkBase.ControlType&nbsp;ctl)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPIDControlType(com.revrobotics.spark.SparkBase.ControlType)" class="member-name-link">setPIDControlType</a><wbr>(com.revrobotics.spark.SparkBase.ControlType&nbsp;ctl)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Set the Control type to be used when the set method is called.</div>
 </div>
@@ -160,17 +166,20 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.revrobotics.CANSparkMax">Methods inherited from class&nbsp;com.revrobotics.CANSparkMax</h3>
-<code>getAlternateEncoder, getAlternateEncoder, getAlternateEncoder</code></div>
+<h3 id="methods-inherited-from-class-com.revrobotics.spark.SparkMax">Methods inherited from class&nbsp;com.revrobotics.spark.SparkMax</h3>
+<code>configure, getAbsoluteEncoder, getAlternateEncoder, getForwardLimitSwitch, getReverseLimitSwitch</code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.revrobotics.CANSparkBase">Methods inherited from class&nbsp;com.revrobotics.CANSparkBase</h3>
-<code>burnFlash, clearFaults, disable, disableVoltageCompensation, enableSoftLimit, enableVoltageCompensation, follow, follow, follow, follow, get, getAbsoluteEncoder, getAbsoluteEncoder, getAnalog, getAnalog, getAnalog, getAppliedOutput, getBusVoltage, getClosedLoopRampRate, getEncoder, getEncoder, getEncoder, getEncoder, getFault, getFaults, getFeedbackDeviceID, getForwardLimitSwitch, getForwardLimitSwitch, getForwardLimitSwitch, getIdleMode, getInverted, getLastError, getMotorTemperature, getOpenLoopRampRate, getOutputCurrent, getPIDController, getReverseLimitSwitch, getReverseLimitSwitch, getReverseLimitSwitch, getSoftLimit, getStickyFault, getStickyFaults, getVoltageCompensationNominalVoltage, isFollower, isSoftLimitEnabled, setCANTimeout, setClosedLoopRampRate, setIdleMode, setInverted, setOpenLoopRampRate, setSecondaryCurrentLimit, setSecondaryCurrentLimit, setSmartCurrentLimit, setSmartCurrentLimit, setSmartCurrentLimit, setSoftLimit, setVoltage, stopMotor</code></div>
+<h3 id="methods-inherited-from-class-com.revrobotics.spark.SparkBase">Methods inherited from class&nbsp;com.revrobotics.spark.SparkBase</h3>
+<code>clearFaults, configureAsync, disable, get, getAnalog, getAppliedOutput, getBusVoltage, getClosedLoopController, getEncoder, getFaults, getInverted, getLastError, getMotorTemperature, getOutputCurrent, getStickyFaults, getStickyWarnings, getWarnings, hasActiveFault, hasActiveWarning, hasStickyFault, hasStickyWarning, isFollower, pauseFollowerMode, pauseFollowerModeAsync, resumeFollowerMode, resumeFollowerModeAsync, setCANTimeout, setInverted, setVoltage, stopMotor</code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.revrobotics.CANSparkLowLevel">Methods inherited from class&nbsp;com.revrobotics.CANSparkLowLevel</h3>
-<code>close, enableExternalUSBControl, getDeviceId, getFirmwareString, getFirmwareVersion, getInitialMotorType, getMotorType, getSafeFloat, getSerialNumber, restoreFactoryDefaults, restoreFactoryDefaults, setControlFramePeriodMs, setPeriodicFramePeriod, setPeriodicFramePeriod, throwIfClosed</code></div>
+<h3 id="methods-inherited-from-class-com.revrobotics.spark.SparkLowLevel">Methods inherited from class&nbsp;com.revrobotics.spark.SparkLowLevel</h3>
+<code>close, createSimFaultManager, getDeviceId, getFirmwareString, getFirmwareVersion, getMotorType, getSafeFloat, getSerialNumber, setCANMaxRetries, setControlFramePeriodMs, setPeriodicFrameTimeout, throwIfClosed</code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-edu.wpi.first.wpilibj.motorcontrol.MotorController">Methods inherited from interface&nbsp;edu.wpi.first.wpilibj.motorcontrol.MotorController</h3>
+<code>setVoltage</code></div>
 </section>
 </li>
 </ul>
@@ -183,11 +192,11 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(int,com.revrobotics.CANSparkLowLevel.MotorType,com.revrobotics.CANSparkBase.ControlType)">
+<section class="detail" id="&lt;init&gt;(int,com.revrobotics.spark.SparkLowLevel.MotorType,com.revrobotics.spark.SparkBase.ControlType)">
 <h3>SparkPIDDrivewrapper</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SparkPIDDrivewrapper</span><wbr><span class="parameters">(int&nbsp;deviceId,
- com.revrobotics.CANSparkLowLevel.MotorType&nbsp;type,
- com.revrobotics.CANSparkBase.ControlType&nbsp;ctl)</span></div>
+ com.revrobotics.spark.SparkLowLevel.MotorType&nbsp;type,
+ com.revrobotics.spark.SparkBase.ControlType&nbsp;ctl)</span></div>
 <div class="block">Wraper class to override the Set method to use the pid contollers
  SetReference. This is usefull when using classes like DifferentalDrive from
  WPIlib where they only use the setmethod to control motor controlers. This
@@ -210,9 +219,9 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="setPIDControlType(com.revrobotics.CANSparkBase.ControlType)">
+<section class="detail" id="setPIDControlType(com.revrobotics.spark.SparkBase.ControlType)">
 <h3>setPIDControlType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPIDControlType</span><wbr><span class="parameters">(com.revrobotics.CANSparkBase.ControlType&nbsp;ctl)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPIDControlType</span><wbr><span class="parameters">(com.revrobotics.spark.SparkBase.ControlType&nbsp;ctl)</span></div>
 <div class="block">Set the Control type to be used when the set method is called.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -223,7 +232,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getPIDControlType()">
 <h3>getPIDControlType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.revrobotics.CANSparkBase.ControlType</span>&nbsp;<span class="element-name">getPIDControlType</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.revrobotics.spark.SparkBase.ControlType</span>&nbsp;<span class="element-name">getPIDControlType</span>()</div>
 </section>
 </li>
 <li>
@@ -234,7 +243,7 @@ loadScripts(document, 'script');</script>
 <dt>Specified by:</dt>
 <dd><code>set</code>&nbsp;in interface&nbsp;<code>edu.wpi.first.wpilibj.motorcontrol.MotorController</code></dd>
 <dt>Overrides:</dt>
-<dd><code>set</code>&nbsp;in class&nbsp;<code>com.revrobotics.CANSparkBase</code></dd>
+<dd><code>set</code>&nbsp;in class&nbsp;<code>com.revrobotics.spark.SparkBase</code></dd>
 </dl>
 </section>
 </li>
